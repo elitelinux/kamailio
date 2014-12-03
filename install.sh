@@ -77,3 +77,8 @@ adduser --quiet --system --group --disabled-password \
         --home /var/run/kamailio kamailio
 # set ownership to /var/run/kamailio
 chown kamailio:kamailio /var/run/kamailio
+##Then you can start/stop Kamailio using the following commands:
+## Start | Stop | Restart
+/etc/init.d/kamailio start
+/etc/init.d/kamailio stop
+/etc/init.d/kamailio restart
