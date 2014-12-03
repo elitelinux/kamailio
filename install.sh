@@ -72,3 +72,8 @@ cd /usr/local/src/kamailio/kamailio/pkg/kamailio/deb/debian/
 mv kamailio.default kamailio
 cd $kPATH
 mkdir -p /var/run/kamailio
+adduser --quiet --system --group --disabled-password \
+        --shell /bin/false --gecos "Kamailio" \
+        --home /var/run/kamailio kamailio
+# set ownership to /var/run/kamailio
+chown kamailio:kamailio /var/run/kamailio
